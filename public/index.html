@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <style>h1 {
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+                input[type=text] {
+                border: none;
+                border-bottom: 2px solid rgb(8, 5, 5);
+                background-color: rgb(231, 226, 226);
+                background-size: auto;
+                color: rgb(12, 5, 5);
+                
+                }                 
+                input[type=text]:hover{
+                    background-color: rgb(76, 185, 199);
+                }
+                h1:hover{
+                    background-color: rgb(108, 92, 197);
+                }
+                table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+              </style>
+    </head>
+    <link rel="manifest" href="manifest.json">
+    <body style="background-color: rgb(114, 48, 190);">
+        <h1>Github Profile</h1>
+        <input class="w3-input" type="text" id="text_input" ><br>
+        <center>
+        <input type="button" class="w3-button w3-black" onclick="gitdata()" value="Get Profile"><br/><hr class="hr-3">
+        
+        <div id='git_image'>
+            <img src="" alt="profile image" id="image">
+            <p id='para'></p>
+        <table style="width:100%"><br/><br/>
+            <tr>
+            <td>Name </td> <td><p id='demo1'></p></td>
+            </tr>
+
+            <tr>
+                <td>Login </td>
+                <td><p id="demo2"></p></td>
+            </tr>
+
+
+            <tr>
+                <td>Node ID </td>
+                <td><p id="demo3"></p></td>
+            </tr>
+
+
+            <tr>
+                <td>URL</td>
+                <td><p id="demo4"></p></td>
+            </tr>
+
+
+            <tr>
+                <td>HTML URL </td>
+                <td><p id="demo5"></p></td>
+            </tr>
+
+            <tr>
+            <td>Followers </td><td><p id='demo6'></p></td>
+            <tr>
+            <td>Following </td><td> <p id='demo7'></p></td>
+            </tr>
+            <tr>
+                <td>ID </td><td> <p id='demo8'></p></td>
+                </tr>
+                <tr>
+                    <td>Location </td><td> <p id='demo9'></p></td>
+                    </tr>
+                    <tr>
+                        <td>Avatar URL </td><td> <p id='demo10'></p></td>
+                        </tr>
+        </table>
+        </div>
+    </center>
+    </body>
+<script>
+    function gitdata(){
+
+    var url='https://api.github.com/users/'+document.getElementById('text_input').value;
+
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.avatar_url)
+        var im = document.getElementById("image");
+        im.setAttribute("src",data.avatar_url);
+        
+        var gi= document.getElementById('para');
+     //   gi.innerHTML=JSON.stringify(data);
+        document.getElementById("demo1").innerHTML = data.name;
+        document.getElementById("demo2").innerHTML = data.login;
+        document.getElementById("demo3").innerHTML = data.node_id;
+        document.getElementById("demo4").innerHTML = data.url;
+        document.getElementById("demo5").innerHTML = data.html_url;
+        document.getElementById("demo6").innerHTML = data.followers;
+        document.getElementById("demo7").innerHTML = data.following;
+        document.getElementById("demo8").innerHTML = data.id;
+        document.getElementById("demo9").innerHTML = data.location;
+        document.getElementById("demo10").innerHTML = data.avatar_url;
+        //document.getElementById("demo0").innerHTML = data.login;
+
+
+    })
+
+    .catch(function(response){
+        return response.status;
+        console.log(response.status);
+    });;
+    
+}
+</script>
+</html>
