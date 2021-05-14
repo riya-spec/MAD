@@ -1,24 +1,21 @@
-# PWA_Program
-This repository consists of the Progressive web apps programs.
-#Progressive web apps
-Progressive web apps are the experiences that combines the best of the web and the best of apps.
-This gives users the kind of reliable,fast and angaging experience.
+# PWA-Login
+A simple login website with PWA features.
 
-#Fast
-They are fast and enables scrolling quickly and smoothly.
+# Install npm in Ubuntu
+sudo apt install npm
 
-#Engaging
-Sending relevant push notifications to the users.
+# Install nodejs in Ubuntu
+sudo apt install nodejs
 
-#Integrated
-They are integrated ,showing up on the home screen and loading as the top level full-screen app.
+# To check the npm version
+npm -v
 
-#Service Workers
-PWA uses service worker to cache the app shell and the data so that it shall work regardless that we are online or offline .
-Service workers are the network progressive enhancement and sits between the browsers and the servers.
+# To check the node version
+node -v
 
-#Manifest Files
-Manifest gives ability to control how our app appears.
+# Commands to run 
+npm init
+node server.js
 
 
 

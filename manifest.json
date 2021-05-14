@@ -1,0 +1,54 @@
+{
+    "name":"Rainbow",
+    "short_name": "Rain",
+    "description":"Phenomean behind the rainbow formed",
+    "start_url": "/index.html",
+    "display" : "standalone",
+    "theme_color":"#2196f3",
+    "background_color":"#2196f3",
+    "scope":"/",
+    "orientation":"portrait",
+    "icons":[{
+            "src":"images/icons/rainbow1.png",
+            "sizes":"72x72",
+            "type":"image/png"
+            },
+        
+            {
+            "src":"images/icons/rainbow2.png",
+            "sizes":"96x96","type":"image/png"
+            },
+
+            {
+                "src":"images/icons/rainbow6.png",
+                "sizes":"144x144",
+                "type":"image/png"
+            },
+
+            {
+                "src":"images/icons/rainbow7.png",
+                "sizes":"152x152","type":"image/png"
+             },
+            
+            {
+                "src":"images/icons/rainbow3.png",
+                "sizes":"192x192",
+                "type":"image/png"
+            },
+                {
+                    "src":"images/icons/rainbow4.png",
+                    "sizes":"384x384","type":"image/png"
+                    
+                },
+                
+                {
+                    "src":"images/icons/rainbow5.png",
+                    "sizes":"512x512",
+                    "type":"image/png"
+                }
+                
+                
+        ],
+            
+            "splash_pages":null
+        }
